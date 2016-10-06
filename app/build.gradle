@@ -7,7 +7,7 @@ model {
 
         defaultConfig {
             testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-            applicationId = 'com.breadwallet'
+            applicationId = 'com.eMarkwallet'
             minSdkVersion.apiLevel = 23
             targetSdkVersion.apiLevel = 24
             versionCode = 28
@@ -19,7 +19,7 @@ model {
             moduleName = "core"
             toolchain = "clang"
             CFlags.addAll(['-std=c99', '-g', '-DBITCOIN_TESTNET=0', '-I' + file('src/main/secp/secp256k1/include'),
-                           '-I' + file('src/main/secp/secp256k1'), '-I' + file('src/main/secp'), '-I' + file('src/main/jni/breadwallet-core'),
+                           '-I' + file('src/main/secp/secp256k1'), '-I' + file('src/main/secp'), '-I' + file('src/main/jni/eMarkwallet-core'),
                            '-I' + file('src/main/jni/transition'), '-Wno-trigraphs', '-Wmissing', '-Wno-missing-prototypes', '-Werror=return-type',
                            '-Wdocumentation', '-Wunreachable-code-aggressive', '-Wno-missing-braces', '-Wparentheses', '-Wswitch', '-Wno-unused-function',
                            '-Wunused-label', '-Wno-unused-parameter', '-Wunused-variable', '-Wunused-value', '-Wempty-body',
@@ -58,7 +58,7 @@ model {
                 debuggable = true
                 minifyEnabled = false
                 ndk {
-                    CFlags.addAll(['-DBITCOIN_TESTNET=1'])
+                    CFlags.addAll(['-DBITCOIN_TESTNET=0'])
                     minifyEnabled = false
                     debuggable = true
                 }
