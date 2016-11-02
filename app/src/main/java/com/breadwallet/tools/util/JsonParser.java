@@ -51,7 +51,7 @@ public class JsonParser {
     public static final String TAG = JsonParser.class.getName();
 
     public static JSONArray getJSonArray(Activity activity) {
-        String jsonString = callURL("https://api.breadwallet.com/rates");
+        String jsonString = callURL("http://deutsche-emark.de/api/rates.php");
         JSONArray jsonArray = null;
         try {
             JSONObject obj = new JSONObject(jsonString);
@@ -69,7 +69,7 @@ public class JsonParser {
     }
 
     public static JSONArray getBackUpJSonArray(Activity activity) {
-        String jsonString = callURL("https://bitpay.com/rates");
+        String jsonString = callURL("http://deutsche-emark.de/api/rates.php");
         //        System.out.println("\n\njsonString: " + jsonString);
         JSONArray jsonArray = null;
         try {
