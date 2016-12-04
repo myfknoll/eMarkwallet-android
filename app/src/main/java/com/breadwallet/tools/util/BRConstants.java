@@ -89,9 +89,9 @@ public class BRConstants {
     /**
      * BRWalletManager
      */
-    public static final long TX_FEE_PER_KB = 5000;
-    public static final long DEFAULT_FEE_PER_KB = (TX_FEE_PER_KB * 1000 + 190) / 191;
-    public static final long MAX_FEE_PER_KB = (100100 * 1000 + 190) / 191;
+    public static final long TX_FEE_PER_KB = 1000;
+    public static final long DEFAULT_FEE_PER_KB = 1000;
+    public static final long MAX_FEE_PER_KB = 10000;
 
     /**
      * BreadWalletApp
@@ -133,9 +133,9 @@ public class BRConstants {
     /**
      * AmountAdapter
      */
-    public static final int MAX_DIGITS_AFTER_SEPARATOR_BITS = 2;
-    public static final int MAX_DIGITS_AFTER_SEPARATOR_MBITS = 5;
-    public static final int MAX_DIGITS_AFTER_SEPARATOR_BITCOINS = 8;
+    public static final int MAX_DIGITS_AFTER_SEPARATOR_BITS = 0;
+    public static final int MAX_DIGITS_AFTER_SEPARATOR_MBITS = 3;
+    public static final int MAX_DIGITS_AFTER_SEPARATOR_BITCOINS = 6;
     public static final int DIGITS_LIMIT = 12;
 
     /**
@@ -160,8 +160,8 @@ public class BRConstants {
     public static final int CURRENT_UNIT_MBITS = 1;
     public static final int CURRENT_UNIT_BITCOINS = 2;
 
-    public static final String bitcoinLowercase = "\u0180";
-    public static final String bitcoinUppercase = "\u0243";
+    public static final String bitcoinLowercase = "mDEM";
+    public static final String bitcoinUppercase = "DEM";
 
     private BRConstants() {
     }
