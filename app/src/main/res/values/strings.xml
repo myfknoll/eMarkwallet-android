@@ -163,7 +163,7 @@
     <!-- checked -->
     <string name="copy_address_to_clipboard">copy address to clipboard</string>
     <!-- checked -->
-    <string name="enter_passcode">passcode for %s</string>
+    <string name="enter_passcode">passcode for eMarkWallet</string>
     <!-- checked -->
     <string name="address_already_in_your_wallet">this payment address is already in your wallet</string>
     <!-- checked -->

@@ -208,7 +208,7 @@ public class PasswordDialogFragment extends DialogFragment {
             currentMode = BRConstants.AUTH_MODE_NEW_PASS;
         }
         if (verifyOnly) {
-            title.setText(String.format(getResources().getString(R.string.enter_passcode), "\"" + BRConstants.bitcoinLowercase + "read\""));
+            title.setText(getResources().getString(R.string.enter_passcode));
         }
 
         textWatcher = new TextWatcher() {
