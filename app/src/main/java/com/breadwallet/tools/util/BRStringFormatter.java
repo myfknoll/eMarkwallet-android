@@ -102,20 +102,19 @@ public class BRStringFormatter {
                 int unit = SharedPreferencesManager.getCurrencyUnit(app);
                 switch (unit) {
                     case BRConstants.CURRENT_UNIT_BITS:
-                        currencySymbolString = BRConstants.bitcoinLowercase;
-                        currencyFormat.setMaximumFractionDigits(2);
-                        if (getNumberOfDecimalPlaces(result) == 1)
-                            currencyFormat.setMinimumFractionDigits(2);
+                        currencySymbolString = BRConstants.bitcoinUppercase;
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                         break;
                     case BRConstants.CURRENT_UNIT_MBITS:
-                        currencySymbolString = "m" + BRConstants.bitcoinUppercase;
-                        currencyFormat.setMaximumFractionDigits(5);
-                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("100000"));
+                        currencySymbolString = BRConstants.bitcoinUppercase;
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                         break;
                     case BRConstants.CURRENT_UNIT_BITCOINS:
                         currencySymbolString = BRConstants.bitcoinUppercase;
-                        currencyFormat.setMaximumFractionDigits(8);
-                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("100000000"));
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                         break;
                 }
             }
@@ -158,20 +157,18 @@ public class BRStringFormatter {
                 int unit = SharedPreferencesManager.getCurrencyUnit(app);
                 switch (unit) {
                     case BRConstants.CURRENT_UNIT_BITS:
-                        currencySymbolString = BRConstants.bitcoinLowercase;
-                        currencyFormat.setMaximumFractionDigits(2);
-                        if (getNumberOfDecimalPlaces(result) == 1)
-                            currencyFormat.setMinimumFractionDigits(2);
-                        break;
+                        currencySymbolString = BRConstants.bitcoinUppercase;
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                     case BRConstants.CURRENT_UNIT_MBITS:
-                        currencySymbolString = "m" + BRConstants.bitcoinUppercase;
-                        currencyFormat.setMaximumFractionDigits(5);
-                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("100000"));
+                        currencySymbolString = BRConstants.bitcoinUppercase;
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                         break;
                     case BRConstants.CURRENT_UNIT_BITCOINS:
                         currencySymbolString = BRConstants.bitcoinUppercase;
-                        currencyFormat.setMaximumFractionDigits(8);
-                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("100000000"));
+                        currencyFormat.setMaximumFractionDigits(6);
+                        result = new BigDecimal(String.valueOf(amount)).divide(new BigDecimal("1000000"));
                         break;
                 }
             }

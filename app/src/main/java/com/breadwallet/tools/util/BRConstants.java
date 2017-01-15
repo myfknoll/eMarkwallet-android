@@ -71,8 +71,8 @@ public class BRConstants {
     public static final String LITTLE_CIRCLE = "\u2022";
     public static String SUPPORT_EMAIL = "support@breadwallet.com";
 
-    public static final int ONE_BITCOIN = 100000000;
-    public static final int HUNDRED_BITS = 10000000;
+    public static final int ONE_BITCOIN = 1000000;
+    public static final int HUNDRED_BITS = 100000;
 
 
     /**
@@ -160,7 +160,7 @@ public class BRConstants {
     public static final int CURRENT_UNIT_MBITS = 1;
     public static final int CURRENT_UNIT_BITCOINS = 2;
 
-    public static final String bitcoinLowercase = "mDEM";
+    public static final String bitcoinLowercase = "Pfennig";
     public static final String bitcoinUppercase = "DEM";
 
     private BRConstants() {
