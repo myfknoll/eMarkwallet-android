@@ -103,9 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/amount"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/dark_grey"
-                android:textSize="15sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/tx_amount_text"
@@ -129,6 +127,44 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/gray"
                 android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_height"
+            android:layout_marginStart="@dimen/transaction_item_margin"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/tx_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/clickable_layout"
+            android:clickable="true"
+            android:padding="@dimen/transaction_item_margin">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/comment"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tx_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/transaction_item_margin"
+                android:gravity="end"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
 
         </RelativeLayout>
 

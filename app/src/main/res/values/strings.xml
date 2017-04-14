@@ -111,7 +111,7 @@
     <!-- checked -->
     <string name="middle_view_tip_first">This is your eMark balance. eMark is a currency. The exchange rate changes with the market.</string>
     <!-- checked -->
-    <string name="middle_view_tip_second">%1$s is for \'bits\'. %2$s = 1 DEM.</string>
+    <string name="middle_view_tip_second">%1$s is for \'bits\'. %2$s = 1 eMark.</string>
     <!-- checked -->
     <string name="done">done</string>
     <!-- checked -->
@@ -326,6 +326,8 @@
     <string name="show_phrase">show phrase</string>
     <!-- checked -->
     <string name="copied">copied</string>
+    <!-- checked -->
+    <string name="comment">TX-Comment:</string>
     <!-- android -->
     <string name="continue_button">continue</string>
     <!-- android -->

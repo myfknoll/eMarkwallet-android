@@ -70,6 +70,7 @@ public class FragmentTransactionExpanded extends Fragment {
         TextView statusText = (TextView) rootView.findViewById(R.id.tx_status_text);
         TextView amountText = (TextView) rootView.findViewById(R.id.tx_amount_text);
         TextView exchangeText = (TextView) rootView.findViewById(R.id.tx_exchange_text);
+        TextView commentText = (TextView) rootView.findViewById(R.id.tx_comment_text);
         hashText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +115,9 @@ public class FragmentTransactionExpanded extends Fragment {
 
             amountText.setText(BRStringFormatter.getFormattedCurrencyString("BTC", amount));
             exchangeText.setText(String.format("(%s)", BRStringFormatter.getExchangeForAmount(rate, iso, new BigDecimal(amount), getActivity())));
-
+            String txComment = item.getTxComment();
+            commentText.setText(txComment);
+//TODO Implement TX Comment
             String fromAddresses[] = item.getFrom();
             setReceivedFromAddresses(generalTxFrom, fromAddresses);
 
@@ -131,6 +134,8 @@ public class FragmentTransactionExpanded extends Fragment {
 
             amountText.setText(String.format("%s", BRStringFormatter.getFormattedCurrencyString("BTC", -amount)));
             exchangeText.setText(String.format("(%s)", BRStringFormatter.getExchangeForAmount(rate, iso, new BigDecimal(-amount), getActivity())));
+            commentText.setText("Not supportet yet");
+//TODO Implement send comment
             String fromAddresses[] = item.getFrom();
             long[] outAmounts = item.getOutAmounts();
             setSentFromAddresses(generalTxFrom, fromAddresses);
